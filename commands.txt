@@ -1,0 +1,17 @@
+####################################################
+                        npm
+####################################################
+npm i # Download all the dependencies for the project.
+npm i [library_name]  # To download and install the required libary. Don't use the []
+npm i nodemon -D # To install the package in Development mode.
+
+
+
+####################################################
+                        yarn
+####################################################
+
+yarn # Download all the dependencies for the project.
+yarn add [library_name]  # To download and install the required libary. Don't use the []
+
+ 
