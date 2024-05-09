@@ -14,7 +14,7 @@ const queryReqFields = (req, res, field_list) => {
 const bodyReqFields = (req, res, field_list) => {
     let resObj = {};
     for (const field of field_list) {
-        if (!req.body[field] || req.query[field].trim() == '') {
+        if (!req.body[field] || req.body[field].trim() == '') {
             resObj[[field]] = "This field is required.";
         }
     }
