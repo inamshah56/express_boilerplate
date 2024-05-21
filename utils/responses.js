@@ -88,6 +88,15 @@ const notFound = (res, message) => {
     });
 };
 
+// ===================== conflictError =====================
+
+const conflictError = (res, message) => {
+    return res.status(409).send({
+        success: false,
+        message: message,
+    });
+};
+
 module.exports = {
     successOk,
     catchError,
@@ -97,5 +106,6 @@ module.exports = {
     successOkWithData,
     created,
     createdWithData,
-    notFound
+    notFound,
+    conflictError
 };
