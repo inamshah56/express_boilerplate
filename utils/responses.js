@@ -24,6 +24,15 @@ const successOkWithData = (res, data, message) => {
 const created = (res, data, message) => {
     return res.status(201).send({
         success: true,
+        message: message,
+    });
+};
+
+// ===================== createdWithData ========================
+
+const createdWithData = (res, data, message) => {
+    return res.status(201).send({
+        success: true,
         data: data,
         message: message,
     });
@@ -70,6 +79,15 @@ const backError = (res, message) => {
     });
 };
 
+// ===================== backError ========================
+
+const notFound = (res, message) => {
+    return res.status(404).send({
+        success: false,
+        message: message,
+    });
+};
+
 module.exports = {
     successOk,
     catchError,
@@ -78,4 +96,6 @@ module.exports = {
     backError,
     successOkWithData,
     created,
+    createdWithData,
+    notFound
 };
